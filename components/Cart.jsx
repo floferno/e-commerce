@@ -68,6 +68,7 @@ const Cart = () => {
                   <div>
                     <p className='quantity-desc'>
                       <span className="minus" onClick={()=>toggleCartItemQty(item._id, 'dec')}><AiOutlineMinus /></span>
+                      {console.log(item, "ini item")}
                       <span className="num">{item.qty}</span>
                       <span className="plus" onClick={()=>toggleCartItemQty(item._id, 'inc')}><AiOutlinePlus /></span>
                     </p>

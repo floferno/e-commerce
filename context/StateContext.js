@@ -10,6 +10,7 @@ export const StateContext = ({ children }) => {
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalQty, setTotalQty] = useState(0)
     const [qty, setQty] = useState(1)
+    // const [totalQtyPerItem, setTotalQtyPerItem] = useState(0)
 
     let foundProduct;
     let index;
@@ -32,14 +33,16 @@ export const StateContext = ({ children }) => {
         // console.log(qty, "ini jumlah product")
         setTotalPrice((prevTotalPrice) => prevTotalPrice + (product.price * qty))
         setTotalQty((prevTotalQty) => prevTotalQty + qty)
+        // setQty((prevQty) => prevQty => )
 
         if (checkProductInCart) { // if the item already in the cart then just updated the qty
 
             const updatedCartItems = cartItems.map((cartItem) => {
+                console.log(cartItem, "ini cart item")
                 if (cartItem._id == product._id) {
                     return {
                         ...cartItem,
-                        quantity: cartItem.qty
+                        qty: cartItem.qty + qty
                     }
                 }
             })
@@ -81,6 +84,7 @@ export const StateContext = ({ children }) => {
         const newCartItems = cartItems.filter((item) => item._id !== product._id)
         setTotalPrice((prevTotalPrice) => prevTotalPrice - (foundProduct.price * foundProduct.qty))
         setTotalQty((prevTotalQty) => prevTotalQty - foundProduct.qty)
+        setQty((prevQty) => prevQty - foundProduct.qty)
         setCartItems(newCartItems)
     }
 
