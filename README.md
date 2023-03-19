@@ -5,7 +5,7 @@ An ecommerce app built with Sanity (for contents), Reactjs (for CRUD products), 
 ![screencapture-localhost-3000-2023-03-19-22_26_32](https://user-images.githubusercontent.com/58562757/226182801-538c90e9-62af-4e2d-ad04-4a7de71862d5.png)
 
 ## Cart (Add Product)
-![image](https://user-images.githubusercontent.com/58562757/226182953-fbac613c-91a2-42d7-99a7-5cce8ce6cdc5.png)
+![image](https://user-images.githubusercontent.com/58562757/226183330-6fcd6765-0a55-4b41-91de-a95fd364fc75.png)
 
 ## Cart (Update Product)
 ![image](https://user-images.githubusercontent.com/58562757/226183057-c2e6c15e-f552-4dc5-93e4-417b1a85003e.png)
