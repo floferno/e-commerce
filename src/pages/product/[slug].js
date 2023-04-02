@@ -5,6 +5,7 @@ import {
 import { client, urlFor } from '../../../lib/client'
 import { Product } from '../../../components'
 import { useStateContext } from '../../../context/StateContext'
+import Image from 'next/image'
 
 const ProductDetail = ({ product, products }) => {
     const { image, name, details, price } = product
@@ -16,11 +17,11 @@ const ProductDetail = ({ product, products }) => {
             <div className="product-detail-container">
                 <div>
                     <div className='image-container'>
-                        <img className="product-detail-image" src={urlFor(image && image[0])} alt={`image`}></img>
+                        <Image className="product-detail-image" src={urlFor(image && image[0])} alt={`image`} />
                     </div>
                     <div className='small-images-container'>
                         {image?.map((item, i) => (
-                            <img
+                            <Image
                                 key={i}
                                 src={urlFor(item)}
                                 className={i == index ? 'small-image selected-image' : 'small-image'}

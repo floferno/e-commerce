@@ -630,7 +630,6 @@ span.text-red {
 
 .quantity-desc .plus {
   color: rgb(49, 168, 49);
-
 }
 
 .maylike-products-wrapper {
@@ -641,7 +640,6 @@ span.text-red {
   text-align: center;
   margin: 50px;
   color: #324d67;
-
   font-size: 28px;
 }
 
@@ -661,7 +659,6 @@ span.text-red {
 .cancel-wrapper {
   background-color: white;
   min-height: 60vh;
-
 }
 
 .success,
